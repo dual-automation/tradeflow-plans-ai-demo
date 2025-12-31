@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>TradeFlow Plans AI – Demo</title>
-  <meta name="description" content="Upload plans and see how TradeFlow turns drawings into scope summaries and proposal drafts." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<title>Plans AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f4f6f8;}
+header{
+  background:linear-gradient(135deg,#050a30,#3533cd);
+  color:#fff;padding:24px;text-align:center;
+}
+header h1{margin:0;font-size:26px;}
+header p{margin:8px 0 0;opacity:.9;}
+.menu-strip{
+  background:#0b102a;color:#dbeafe;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:10px 14px;font-size:14px;
+}
+.menu-strip a{
+  background:#fff;color:#050a30;text-decoration:none;
+  padding:8px 12px;border-radius:10px;font-weight:700;margin-left:8px;
+}
+main{padding:12px;}
+#chat_form{
+  width:100%;
+  min-height:calc(100vh - 210px);
+  background:#fff;border-radius:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+@media(max-width:520px){
+  #chat_form{min-height:calc(100vh - 230px);}
+}
+</style>
 </head>
 
-<body style="font-family: Inter, Arial, sans-serif; background:#f8f9fb; margin:0; padding:40px;">
+<body>
+<header>
+  <h1>Plans AI</h1>
+  <p>Turn project details into scopes, takeoffs, and proposals</p>
+</header>
 
-  <div style="max-width:800px; margin:auto;">
-    <h1>TradeFlow Plans AI</h1>
-
-    <p>
-      Upload construction plans and see how TradeFlow converts drawings into
-      scope summaries and proposal drafts.
-    </p>
-
-    <p><strong>This is a limited demo.</strong></p>
-
-    <p>
-      Full takeoffs, pricing guidance, and automation are included with
-      <strong>TradeFlow Advanced</strong>.
-    </p>
+<div class="menu-strip">
+  <div><b>Tip:</b> Describe the project or select a Plans workflow</div>
+  <div>
+    <a href="https://tradeflowai.tech" target="_blank">Back to Site</a>
+    <a href="https://tradeflowai.tech#pricing" target="_blank">Upgrade</a>
   </div>
+</div>
 
-  <!-- PLANS AI DEMO BOT -->
-  <script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="57773"></script>
+<main>
+  <div id="chat_form"></div>
+  <script src="https://app.aminos.ai/js/chat_form_plugin.js" data-bot-id="57797"></script>
+</main>
 </body>
 </html>
